@@ -30,3 +30,9 @@ html, body, #root {
 #root > main {
     flex: 1
 }
+/* .banner-home h1 {
+  color: ;   
+} */
+.banner-home p {
+    font-size: 1.125rem;    
+}
