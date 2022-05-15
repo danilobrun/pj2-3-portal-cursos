@@ -7,4 +7,4 @@ const corteCiclo = (corte, corte2, religacao, religacao2, efetividade, efetivida
     Total Efetividade: ${totalEfetividade}`);
 }
 
-corteCiclo(99, 176, 68, 215, 35, 89)
+corteCiclo(145, 107, 90, 38, 31, 29)

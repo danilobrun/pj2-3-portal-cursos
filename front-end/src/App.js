@@ -11,7 +11,7 @@ function Header () {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar-header' />
           <Navbar.Collapse id='navbar-header'>
-            <Nav>
+            <Nav className='ms-auto'>
               <Nav.Link href='/'>Home</Nav.Link>
               <Nav.Link href='/cursos'>Cursos</Nav.Link>
             </Nav>
