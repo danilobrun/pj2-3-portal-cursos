@@ -22,15 +22,26 @@ function Header () {
   )
 }
 
+function Footer () {
+  return (
+    <footer className='footer bg-dark bg-gradient text-white py-2 mt-4'>
+      <p className='m-0'>Todos os direitos reservados a Cifra Engenharia.</p>
+    </footer>
+  )
+}
+
 function HomeView () {
   return (
     <>
       <Header />
-      <p>Conteúdo</p>
-      <p>Rodapé</p>
+      <main>
+        <p>Conteúdo</p>
+      </main>
+      <Footer />
     </>
   )
 }
+
 function App() {
   return (
    <HomeView />
