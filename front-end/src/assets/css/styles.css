@@ -36,3 +36,6 @@ html, body, #root {
 .banner-home p {
     font-size: 1.125rem;    
 }
+.banner-home > div {
+    flex: 1;
+}
