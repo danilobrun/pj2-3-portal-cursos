@@ -1,6 +1,7 @@
 import { Button, Container } from "react-bootstrap";
 import { Layout } from "../../components/Layout";
 import Banner from '../../assets/img/banner.jpg'
+import { Link } from "react-router-dom";
 
 export function HomeView () {
     return (
@@ -11,7 +12,7 @@ export function HomeView () {
               <h1>Bem vindo(a) a Cifra Engenharia</h1>
               <p>Conheça nossos portais internos.</p>
               <p>Acesse nossos sistemas agora mesmo.</p>
-              <Button className='text-uppercase'>Acessar</Button>
+              <Button as={Link} to='/cursos' className='text-uppercase'>Acessar</Button>
             </div>
             <div>
               <img src={Banner} alt='Cifra Engenharia Sistemas' width={626} height={391} className='img-fluid'></img>
