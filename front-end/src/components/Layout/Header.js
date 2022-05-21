@@ -14,7 +14,7 @@ export function Header () {
             <Navbar.Collapse id='navbar-header'>
               <Nav className='ms-auto'>
                 <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                <Nav.Link as={Link} to='/cursos'>Cursos</Nav.Link>
+                <Nav.Link as={Link} to='/portals'>Portais</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
