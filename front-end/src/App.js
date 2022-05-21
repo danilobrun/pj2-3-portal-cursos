@@ -7,7 +7,7 @@ function App() {
   return (
    <Routes>
      <Route path='/' element={<HomeView />} />
-     <Route path='/portais' element={<PortalsView />} />
+     <Route path='/portals' element={<PortalsView />} />
      <Route path='*' element={<NotFoundView />} />
    </Routes>
   );

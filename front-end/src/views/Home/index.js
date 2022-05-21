@@ -15,7 +15,7 @@ export function HomeView () {
               <h1>Bem vindo(a) a Cifra Engenharia</h1>
               <p>Uma empresa com mais de 15 anos de atuação.</p>
               <p>Conheça nossos portais internos.</p>
-              <Button as={Link} to='/cursos' className='text-uppercase'>Acessar</Button>
+              <Button as={Link} to='/portals' className='text-uppercase'>Acessar</Button>
             </div>
             <div>
               <Carousel>
