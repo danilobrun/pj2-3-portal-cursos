@@ -1,51 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Layout } from "../../../components/Layout";
 import { CardPortals } from "../../../components/CardPortals";
-
-const portals = [
-    {
-        id: 1,
-        name: 'Metabase',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    },
-    {
-        id: 2,
-        name: 'Giscomp',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    },
-    {
-        id: 3,
-        name: 'GSAN',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    },
-    {
-        id: 4,
-        name: 'Sisper',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    },
-    {
-        id: 5,
-        name: 'Chamados TI',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    },
-    {
-        id: 6,
-        name: 'RH',
-        shortDescription: 'Dashboards atualizadas, e em relatórios e gráficos kkkkkkkkkkkkkkkkkkkkk',
-        image: '/assets/img/produtos/corinthias-tshirt.jpeg',  
-    }
-]
+import { useEffect, useState } from "react";
+import { Loading } from "../../../components/Loading";
 
 export function PortalsView () {
+    const [portals, setPortals] = useState([])
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        fetch('http://localhost:3001/portals')
+            .then((response) => response.json())
+            .then((data) => {
+                setPortals(data)
+                setLoading(false)
+            })
+            
+    }, [])
     return (
         <Layout>
             <Container>
                 <h1 className='text-center mt-4'>Portais</h1>
+                {loading && (
+                    <Loading />
+                )}
                 <Row>
                    {portals.map(portal => (
                         <Col key={portal.id} className='mb-4' xs={6} md={4} lg={3}>

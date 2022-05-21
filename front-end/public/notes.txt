@@ -1,4 +1,7 @@
 Aula - 04/04
 
 views/Portals/index.js
+views/Courses/index.js
 CoursesView = PortalsView
+
+Aula - 06/05
