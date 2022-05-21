@@ -13,8 +13,8 @@ export function HomeView () {
           <div className='shadow border p-4 p-md-5 my-3 banner-home d-md-flex aling-items-center'>
             <div className="mb-2">
               <h1>Bem vindo(a) a Cifra Engenharia</h1>
+              <p>Uma empresa com mais de 15 anos de atuação.</p>
               <p>Conheça nossos portais internos.</p>
-              <p>Acesse nossos sistemas agora mesmo.</p>
               <Button as={Link} to='/cursos' className='text-uppercase'>Acessar</Button>
             </div>
             <div>
