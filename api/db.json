@@ -1,0 +1,41 @@
+{
+  "portals": [
+    {
+      "name": "Metabase",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 1
+    },
+    {
+      "name": "Giscomp",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 2
+    },
+    {
+      "name": "GSAN",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 3
+    },
+    {
+      "name": "Sisper",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 4
+    },
+    {
+      "name": "Chamados TI",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 5
+    },
+    {
+      "name": "RH",
+      "shortDescription": "Dashboards atualizadas, e em relatórios e gráficos",
+      "image": "/assets/img/produtos/corinthias-tshirt.jpeg",
+      "id": 6
+    }
+  ],
+  "inscriptions": []
+}
