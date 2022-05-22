@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
 import { NotFoundView } from "../NotFound";
+import { Inscriptions } from "./inscriptions";
 
 export function PortalDetailView () {
     const { id } = useParams()
@@ -13,7 +14,7 @@ export function PortalDetailView () {
     useEffect(() => {
             const fetchPortal = async () => {
                 try {
-                    const response = await fetch(`http://localhost:3001/portals/${id}`)
+                    const response = await fetch(`http://localhost:3001/portals/${id}?_embed=inscriptions`)
                     if (!response.ok) {
                         throw new Error('Reponse not ok.')
                     }
@@ -42,7 +43,12 @@ export function PortalDetailView () {
                 {errorMsg ? (
                     <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
-                    <h1>{portal?.name}</h1>    
+                    <>
+                        <h1>{portal.name}</h1>
+                        <p><strong>Responsáveis:</strong> {portal.responsible}</p>
+                        <p>{portal.description}</p>
+                        <Inscriptions inscriptions={portal.inscriptions} />
+                    </>
                 )}
             </Container>
         </Layout>
