@@ -6,7 +6,7 @@ const initialFormData = {
     userEmail: ''
 }
 
-export function InscriptionsForm ({ portalId }) {
+export function InscriptionsForm ({ portalId, onRegister }) {
     const [showSuccess, setShowSuccess] = useState(false)
     const [isSubmiting, setIsSubmiting] = useState(false)
     const [errorMsg, setErrorMsg] = useState()
@@ -35,6 +35,7 @@ export function InscriptionsForm ({ portalId }) {
             })
             setShowSuccess(true)
             setFormData(initialFormData)
+            onRegister()
         } catch (err) {
             console.log(err)
             setErrorMsg('Falha ao fazer inscrição. Tente novamente.')
