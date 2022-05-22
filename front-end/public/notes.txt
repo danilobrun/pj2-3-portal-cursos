@@ -4,4 +4,6 @@ views/Portals/index.js
 views/Courses/index.js
 CoursesView = PortalsView
 
-Aula - 06/05
+Aula - 11/04 
+Minha pagina de detalhes do curso nao carrega nome portal?.name
+nem passar id pela url 
