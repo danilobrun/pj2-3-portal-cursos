@@ -40,7 +40,7 @@ export function PortalDetailView () {
     }
     return (
         <Layout>
-            <Container>
+            <Container className="portal-detail-container">
                 {errorMsg ? (
                     <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
@@ -49,7 +49,7 @@ export function PortalDetailView () {
                         <p><strong>Responsáveis:</strong> {portal.responsible}</p>
                         <p>{portal.description}</p>
                         <Inscriptions inscriptions={portal.inscriptions} />
-                        <InscriptionsForm />
+                        <InscriptionsForm portalId={id} />
                     </>
                 )}
             </Container>

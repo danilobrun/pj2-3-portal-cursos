@@ -39,3 +39,6 @@ html, body, #root {
 .banner-home > div {
     flex: 1;
 }
+.portal-detail-container {
+    max-width: 900px;
+}
