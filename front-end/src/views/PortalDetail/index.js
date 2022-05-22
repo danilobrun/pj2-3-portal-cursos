@@ -5,6 +5,7 @@ import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
 import { NotFoundView } from "../NotFound";
 import { Inscriptions } from "./inscriptions";
+import { InscriptionsForm } from "./inscriptionsForm";
 
 export function PortalDetailView () {
     const { id } = useParams()
@@ -44,10 +45,11 @@ export function PortalDetailView () {
                     <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
                     <>
-                        <h1>{portal.name}</h1>
+                        <h1 className="text-center mt-4">{portal.name}</h1>
                         <p><strong>Responsáveis:</strong> {portal.responsible}</p>
                         <p>{portal.description}</p>
                         <Inscriptions inscriptions={portal.inscriptions} />
+                        <InscriptionsForm />
                     </>
                 )}
             </Container>
