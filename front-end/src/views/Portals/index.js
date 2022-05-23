@@ -1,8 +1,8 @@
 import { Alert, Col, Container, Row } from "react-bootstrap";
-import { Layout } from "../../../components/Layout";
-import { CardPortals } from "../../../components/CardPortals";
+import { Layout } from "../../components/Layout";
+import { CardPortals } from "../../components/CardPortals";
 import { useEffect, useState } from "react";
-import { Loading } from "../../../components/Loading";
+import { Loading } from "../../components/Loading";
 
 export function PortalsView () {
     const [portals, setPortals] = useState([])

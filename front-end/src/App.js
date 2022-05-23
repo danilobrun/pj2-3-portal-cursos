@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { HomeView } from "./views/Home";
-import { PortalsView } from "./views/Home/Portals";
+import { PortalsView } from "./views/Portals";
 import { NotFoundView } from "./views/NotFound";
 import { PortalDetailView } from "./views/PortalDetail";
 
