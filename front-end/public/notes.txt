@@ -6,3 +6,9 @@ CoursesView = PortalsView
 
 Aula - 11/04 
 final da aula fala sobre aplicar img nos cards.
+Pêndencias: 
+1 - Hospedar API (heroku problema verificar firebase)
+2 - Corrigir proporção da imagem dos cards
+
+
+
