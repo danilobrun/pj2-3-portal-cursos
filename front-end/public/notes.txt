@@ -11,7 +11,7 @@ Pêndencias:
 2 - Corrigir proporção da imagem dos cards
 
 
-Aula - 18/04
+Aula - 18/04 - 01:01
 Para mostrar de forma incremental o as requisições via index pra ficar númeral 1,2,3
 minuto 58, hoje o jogo # é como se fosse a matricula, o ingresso ou etc...
 
