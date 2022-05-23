@@ -1,26 +1,25 @@
 import { Alert, Col, Container, Row } from "react-bootstrap";
-import { Layout } from "../../../components/Layout";
-import { CardPortals } from "../../../components/CardPortals";
+import { Layout } from "../../components/Layout";
+import { CardPortals } from "../../components/CardPortals";
 import { useEffect, useState } from "react";
-import { Loading } from "../../../components/Loading";
+import { Loading } from "../../components/Loading";
+import { getPortals } from "../../services/Portals.service";
 
 export function PortalsView () {
     const [portals, setPortals] = useState([])
     const [loading, setLoading] = useState(true)
     const [errorMsg, setErrorMsg] = useState()
     useEffect(() => {
-        fetch('http://localhost:3001/portals')
-            .then((response) => response.json())
-            .then((data) => {
+        const fetchPortals = async () => {
+            try {
+                const data = await getPortals()
                 setPortals(data)
-            })
-            .catch(() => {
+            } catch {
                 setErrorMsg('Falha ao buscar portais. Recarregue a página. Caso o erro persista entre em contato com administrador Danilo Brun.')
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-            
+            }
+            setLoading(false)
+        }
+        fetchPortals()        
     }, [])
     return (
         <Layout>

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Alert, Button, Form } from "react-bootstrap"
+import { createInscriptions } from "../../services/Inscriptions.service"
 
 const initialFormData = {
     userName: '',
@@ -22,16 +23,10 @@ export function InscriptionsForm ({ portalId, onRegister }) {
         try {
             setErrorMsg(undefined)
             setIsSubmiting(true)
-            await fetch(`http://localhost:3001/inscriptions`, {
-                method: 'POST',
-                body: JSON.stringify({
-                    name: formData.userName,
-                    email: formData.userEmail,
-                    portalId: parseInt(portalId)
-                }),
-                headers: {
-                    'content-type': 'application/json'
-                }
+            await createInscriptions({
+                name: formData.userName,
+                email: formData.userEmail,
+                portalId: parseInt(portalId)
             })
             setShowSuccess(true)
             setFormData(initialFormData)

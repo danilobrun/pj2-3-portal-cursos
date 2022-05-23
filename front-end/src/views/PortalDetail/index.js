@@ -3,6 +3,7 @@ import { Alert, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { Loading } from "../../components/Loading";
+import { getPortalById } from "../../services/Portals.service";
 import { NotFoundView } from "../NotFound";
 import { Inscriptions } from "./inscriptions";
 import { InscriptionsForm } from "./inscriptionsForm";
@@ -14,11 +15,7 @@ export function PortalDetailView () {
     const [errorMsg, setErrorMsg] = useState()
     const fetchPortal = useCallback(async () => {
         try {
-            const response = await fetch(`http://localhost:3001/portals/${id}?_embed=inscriptions`)
-            if (!response.ok) {
-                throw new Error('Reponse not ok.')
-            }
-            const data = await response.json()
+            const data = await getPortalById(id)
             setPortal(data)
             setLoading(false)
         } catch(err) {
