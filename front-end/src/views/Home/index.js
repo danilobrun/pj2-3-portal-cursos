@@ -5,12 +5,13 @@ import Cadastramento from '../../assets/img/img-cadastramento-800x600.png'
 import Georreferenciamento from '../../assets/img/img-georreferenciamento-800x600.png'
 import Corte from '../../assets/img/img-corte-1-800x600.png'
 import Religacao from '../../assets/img/img-religacao-800x600.png'
+import styled from "styled-components";
 
 export function HomeView () {
     return (
       <Layout>
         <Container>
-          <div className='shadow border p-4 p-md-5 my-3 banner-home d-md-flex aling-items-center'>
+          <BannerHome className='shadow border p-4 p-md-5 my-3 d-md-flex aling-items-center'>
             <div className="mb-2">
               <h1>Bem vindo(a) a Cifra Engenharia</h1>
               <p>Uma empresa com mais de 15 anos de atuação.</p>
@@ -49,8 +50,20 @@ export function HomeView () {
                 </Carousel.Item> 
               </Carousel>
             </div>
-          </div>
+          </ BannerHome>
         </Container>
       </ Layout>
     )
   }
+
+  const BannerHome = styled.div`
+    & h1 {
+      color: rgb(33, 37, 41);
+    }
+    & p {
+      font-size: 1.125rem;
+    }
+    & > div {
+      flex: 1;
+    }
+  `

@@ -7,6 +7,7 @@ import { getPortalById } from "../../services/Portals.service";
 import { NotFoundView } from "../NotFound";
 import { Inscriptions } from "./inscriptions";
 import { InscriptionsForm } from "./inscriptionsForm";
+import styled from "styled-components"
 
 export function PortalDetailView () {
     const { id } = useParams()
@@ -36,7 +37,7 @@ export function PortalDetailView () {
     }
     return (
         <Layout>
-            <Container className="portal-detail-container">
+            <ContainerStyled>
                 {errorMsg ? (
                     <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
@@ -48,7 +49,11 @@ export function PortalDetailView () {
                         <InscriptionsForm portalId={id} onRegister={fetchPortal}/>
                     </>
                 )}
-            </Container>
+            </ContainerStyled>
         </Layout>
     )
 }
+
+const ContainerStyled = styled(Container)`
+    max-width: 900px;
+`
