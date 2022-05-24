@@ -3,6 +3,7 @@ import { HomeView } from "./views/Home";
 import { PortalsView } from "./views/Portals";
 import { NotFoundView } from "./views/NotFound";
 import { PortalDetailView } from "./views/PortalDetail";
+import { DashboardView } from "./views/Dashboard";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <Route path='/' element={<HomeView />} />
      <Route path='/portals' element={<PortalsView />} />
      <Route path='/portals/:id' element={<PortalDetailView />} />
+     <Route path='/portal' element={<DashboardView />} />
      <Route path='*' element={<NotFoundView />} />
    </Routes>
   );

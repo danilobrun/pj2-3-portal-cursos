@@ -8,7 +8,14 @@ Aula - 11/04
 final da aula fala sobre aplicar img nos cards.
 Pêndencias: 
 1 - Hospedar API (heroku problema verificar firebase)
-2 - Corrigir proporção da imagem dos cards
+2 - Corrigir proporção da imagem dos cards (usei object-fit: cover)
+CardsPortals
+const CardImgStyled = styled(Card.Img)`
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
+` 
+
 
 
 Aula - 18/04 - 01:01
