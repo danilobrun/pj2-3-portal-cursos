@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/logo-cifra.png'
 import styled from 'styled-components'
@@ -16,13 +16,7 @@ export function Header () {
               <Nav className='ms-auto'>
                 <NavLinkStyled forwardedAs={Link} to='/'>Home</NavLinkStyled>
                 <NavLinkStyled forwardedAs={Link} to='/portals'>Portais</NavLinkStyled>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
+                <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
               </Nav>
             </Navbar.Collapse>
           </Container>

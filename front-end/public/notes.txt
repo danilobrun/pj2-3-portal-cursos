@@ -22,3 +22,12 @@ Aula - 18/04 - 01:01
 Para mostrar de forma incremental o as requisições via index pra ficar númeral 1,2,3
 minuto 58, hoje o jogo # é como se fosse a matricula, o ingresso ou etc...
 
+Aula - 20/04 - Falta Notion
+
+Aula - 25/04 - 
+Feature para aplicar o botão de olho para habilitar o input do password
+https://react-bootstrap.github.io/forms/input-group/
+Buttons addons -> botaríamos no button direito algum ícone do fontawesome do olhinho
+quando o usuário clicar no buttom o onClick muda o estado (true/false) alterando o campo
+form.control o type='password' para 'text'
+
