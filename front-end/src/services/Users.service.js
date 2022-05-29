@@ -22,5 +22,5 @@ export const login = async (credentialsData) => {
         ...data.user
     }
     setStorageItem('user', JSON.stringify(userData))
-
+    return userData
 } 
