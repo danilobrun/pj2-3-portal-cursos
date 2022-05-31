@@ -31,5 +31,11 @@ Buttons addons -> botaríamos no button direito algum ícone do fontawesome do o
 quando o usuário clicar no buttom o onClick muda o estado (true/false) alterando o campo
 form.control o type='password' para 'text'
 
-Aula 27/04 - 42:17
+Aula 27/04
+
+Aula - 02/05
+
+Aula - 04/05 - Não tem no portal analisar.
+Aula - 09/05 - Não tem no portal analisar.
+Aula - 11/05 - Tem aula no portal.
 
