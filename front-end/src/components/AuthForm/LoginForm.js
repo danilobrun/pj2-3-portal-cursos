@@ -4,7 +4,7 @@ import { login } from "../../services/Users.service";
 import { toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
-import { userLogin } from "../../store/User/User.action";
+import { userLogin } from "../../store/User/User.actions";
 
 export function LoginForm () {
     const [formData, setFormData] = useState({
