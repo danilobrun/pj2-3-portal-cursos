@@ -1,9 +1,12 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/img/logo-cifra.png'
-import styled from 'styled-components'
+import Logo from '../../assets/img/logo-cifra.png';
+import styled from 'styled-components';
+import { useSelector } from 'react-redux'
+import { selectIsUserLoggedIn } from "../../store/User/User.selectors";
 
 export function Header () {
+  const isUserLoggedIn = useSelector(selectIsUserLoggedIn)
     return (
       <header>
         <NavbarStyled bg='secondary bg-gradient' variant="light" expand='md'>
@@ -16,7 +19,11 @@ export function Header () {
               <Nav className='ms-auto'>
                 <NavLinkStyled forwardedAs={Link} to='/'>Home</NavLinkStyled>
                 <NavLinkStyled forwardedAs={Link} to='/portals'>Portais</NavLinkStyled>
-                <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
+                {isUserLoggedIn ? (
+                  <NavLinkStyled forwardedAs={Link} to='/portal'>Acessar Portal</NavLinkStyled>
+                ) : (
+                  <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>
