@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { createUser } from "../../services/Users.service";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../store/User/User.actions";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"
 
 export function RegisterForm () {
     const [formData, setFormData] = useState({
@@ -14,9 +19,17 @@ export function RegisterForm () {
             [event.target.name]: event.target.value
         })
     }
-    const handleSubmit = (event) => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log(formData);
+        try {
+            const userData = await createUser(formData)
+            dispatch(userLogin(userData))
+            navigate('/portal')
+        } catch {
+            toast.error('Falha ao fazer cadastro. Tente novamente.')
+        }
     }
     return (
         <Form onSubmit={handleSubmit}>
