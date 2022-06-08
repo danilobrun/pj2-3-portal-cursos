@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../store/User/User.actions";
 
-export function LoginForm () {
+export function LoginForm ({ redirectAfterLogin }) {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -26,7 +26,9 @@ export function LoginForm () {
             const userData = await login(formData)
             // Enviar para o redux
             dispatch(userLogin(userData))
-            navigate('/portal')
+            if (redirectAfterLogin) {
+                navigate('/portal') 
+            }
         } catch (error) {
             const message = error.message === 'Credentials invalid.'
                 ? 'E-mail ou senha inválidos.'
