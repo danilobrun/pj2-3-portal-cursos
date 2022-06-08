@@ -38,7 +38,10 @@ export const createUser = async (userData) => {
     })
     const data = await response.json()
     if (!response.ok) {
-        throw new Error('Response not ok.')
+        const message = typeof data == 'string'
+            ? data
+            : 'Reponse not ok.'
+        throw new Error(message)
     }
     return processAuthResponse(data)
 }

@@ -27,8 +27,11 @@ export function RegisterForm () {
             const userData = await createUser(formData)
             dispatch(userLogin(userData))
             navigate('/portal')
-        } catch {
-            toast.error('Falha ao fazer cadastro. Tente novamente.')
+        } catch (error) {
+            const message = error.message === 'Email already exists'
+                ? 'Este e-mail já está em uso.'
+                : 'Falha ao fazer cadastro. Tente novamente.'
+            toast.error(message)
         }
     }
     return (
@@ -65,6 +68,7 @@ export function RegisterForm () {
                     onChange={handleChange}
                     name="password"
                     required
+                    minLength={4}
                 />
             </Form.Group>
             <Button type="submit">Criar conta</Button>
